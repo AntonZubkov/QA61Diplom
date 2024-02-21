@@ -40,5 +40,5 @@ ___
 ### Запуск автотестов
 ___
 * в терминале открываем новое окно и вводим команду:
-  * для mysql ./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"
-  * для postgresql ./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"
+  * для mysql **./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"**
+  * для postgresql **./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"**
