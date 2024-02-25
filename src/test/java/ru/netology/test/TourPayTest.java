@@ -1,24 +1,24 @@
 package ru.netology.test;
 
-import com.codeborne.selenide.Condition;
+//import com.codeborne.selenide.Condition;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+//import org.openqa.selenium.By;
+//import java.time.LocalDate;
+//import java.time.format.DateTimeFormatter;
 import ru.netology.page.BuyPage;
 import ru.netology.page.StartPage;
 import ru.netology.data.DataHelper;
 import ru.netology.data.SQLHelper;
 
 
-import java.time.Duration;
+//import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.*;
+//import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-import static ru.netology.data.DataHelper.*;
+//import static ru.netology.data.DataHelper.*;
 import static ru.netology.data.SQLHelper.cleanDatabase;
 
 public class TourPayTest {
@@ -213,19 +213,4 @@ public class TourPayTest {
         buyPage.wrongFormatCVVNotificationWait();
         Assertions.assertNull(SQLHelper.getStatusForCreditForm());
     }
-    /*
-    //1.19
-    @Test
-    @DisplayName("")
-    public void shouldTest(){
-
-
-
-    //1.20
-    @Test
-    @DisplayName("")
-    public void shouldTest(){
-
-    }
-    */
 }
