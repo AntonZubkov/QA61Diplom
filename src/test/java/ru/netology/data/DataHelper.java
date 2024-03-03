@@ -18,11 +18,11 @@ public class DataHelper {
     }
 
     public static String getApprovedCardInfo() {
-        return ("4444 44444 4444 4441");
+        return "4444 4444 4444 4441";
     }
 
     public static String getDeclinedCardInfo() {
-        return ("4444 4444 4444 4442");
+        return "4444 4444 4444 4442";
     }
 
 

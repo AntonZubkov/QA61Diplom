@@ -60,34 +60,34 @@ public class BuyPage {
     }
 
     public void wrongCardNumberNotificationWait() {
-        incorrectCardNumber.shouldBe(visible, Duration.ofSeconds(20));
+        incorrectCardNumber.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void wrongMonthNotificationWait() {
-        incorrectFormatMonth.shouldBe(visible, Duration.ofSeconds(20));
+        incorrectFormatMonth.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void wrongYearNotificationWait() {
-        incorrectFormatYear.shouldBe(visible, Duration.ofSeconds(20));
+        incorrectFormatYear.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void validityErrorNotificationWait() {
-        validityError.shouldBe(visible, Duration.ofSeconds(20));
+        validityError.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void expiredCardNotificationWait() {
-        cardExpiredError.shouldBe(visible, Duration.ofSeconds(20));
+        cardExpiredError.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void ownerEmptyNotificationWait() {
-        emptyOwnerError.shouldBe(visible, Duration.ofSeconds(20));
+        emptyOwnerError.shouldBe(visible, Duration.ofSeconds(0));
     }
 
     public void incorrectFormatOwnerNotificationWait() {
-        incorrectFormatOwner.shouldBe(visible, Duration.ofSeconds(20));
+        incorrectFormatOwner.shouldBe(visible, Duration.ofSeconds());
     }
 
     public void wrongFormatCVVNotificationWait() {
-        wrongFormatCVV.shouldBe(visible, Duration.ofSeconds(20));
+        wrongFormatCVV.shouldBe(visible, Duration.ofSeconds(0));
     }
 }

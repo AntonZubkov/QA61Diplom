@@ -39,12 +39,9 @@ public class TourPayTest {
         buyPage= startPage.goToBuyPage();
     }
 
-    @AfterEach
-    void TearDownAll(){
-        cleanDatabase();
-    }
     @AfterAll
     static void tearDownAll() {
+        cleanDatabase();
         SelenideLogger.removeListener("allure");
     }
 

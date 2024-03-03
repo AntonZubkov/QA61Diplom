@@ -57,7 +57,7 @@ public class TourCreditTest {
         creditPage.putData(DataHelper.getApprovedCardInfo(),DataHelper.month(),DataHelper.generateYear("yy"),
                 DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.successNotificationWait();
-        Assertions.assertEquals("APPROVED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("APPROVED", SQLHelper.getStatusForCreditForm());
     }
     //1.2
     @Test
@@ -66,7 +66,7 @@ public class TourCreditTest {
         creditPage.putData(DataHelper.getDeclinedCardInfo(),DataHelper.month(),DataHelper.generateYear("yy"),
                 DataHelper.ownerInfo(),DataHelper.cvcInfo());
         creditPage.errorNotificationWait();
-        Assertions.assertEquals("DECLINED", SQLHelper.geStatusInData());
+        Assertions.assertEquals("DECLINED", SQLHelper.getStatusForCreditForm());
     }
     //1.3
     @Test
