@@ -13,7 +13,8 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class CreditPage {
 
-    private SelenideElement heading = $$("h3").get(1).shouldBe(Condition.visible, Duration.ofSeconds(15)).shouldHave(exactText("Кредит по данным карты"));
+    private SelenideElement heading = $$("h3").get(1).shouldBe(Condition.visible,
+            Duration.ofSeconds(15)).shouldHave(exactText("Кредит по данным карты"));
     private SelenideElement cardNumber = $(".input [placeholder = '0000 0000 0000 0000']");
     private SelenideElement monthField = $(".input [placeholder = '08']");
     private SelenideElement yearField = $(".input [placeholder = '22']");
@@ -21,8 +22,10 @@ public class CreditPage {
     private SelenideElement CVCField = $(".input [placeholder = '999']");
 
 
-    private SelenideElement successMessage =  $$(".notification__content").find(text("Операция одобрена Банком."));
-    private SelenideElement errorMessage = $$(" .notification__content").find(text("Ошибка! Банк отказал в проведении операции."));
+    private SelenideElement successMessage =  $$(".notification__content").
+            find(text("Операция одобрена Банком."));
+    private SelenideElement errorMessage = $$(" .notification__content").
+            find(text("Ошибка! Банк отказал в проведении операции."));
 
     private SelenideElement incorrectCardNumber = $(byText("Неверный формат"));
     private SelenideElement incorrectFormatMonth = $(byText("Неверный формат"));
@@ -52,27 +55,27 @@ public class CreditPage {
         errorMessage.shouldBe(visible,Duration.ofSeconds(20));
     }
     public void wrongCardNumberNotificationWait(){
-        incorrectCardNumber.shouldBe(visible,Duration.ofSeconds(0));
+        incorrectCardNumber.shouldBe(visible);
     }
     public void wrongMonthNotificationWait(){
-        incorrectFormatMonth.shouldBe(visible,Duration.ofSeconds(0));
+        incorrectFormatMonth.shouldBe(visible);
     }
     public void wrongYearNotificationWait(){
-        incorrectFormatYear.shouldBe(visible,Duration.ofSeconds(0));
+        incorrectFormatYear.shouldBe(visible);
     }
     public void validityErrorNotificationWait(){
-        validityError.shouldBe(visible,Duration.ofSeconds(0));
+        validityError.shouldBe(visible);
     }
     public void expiredCardNotificationWait(){
-        cardExpiredError.shouldBe(visible,Duration.ofSeconds(0));
+        cardExpiredError.shouldBe(visible);
     }
     public void ownerEmptyNotificationWait(){
-        emptyOwnerError.shouldBe(visible,Duration.ofSeconds(0));
+        emptyOwnerError.shouldBe(visible);
     }
     public void incorrectFormatOwnerNotificationWait(){
-        incorrectFormatOwner.shouldBe(visible,Duration.ofSeconds(0));
+        incorrectFormatOwner.shouldBe(visible);
     }
     public void wrongFormatCVVNotificationWait(){
-        wrongFormatCVV.shouldBe(visible,Duration.ofSeconds(0));
+        wrongFormatCVV.shouldBe(visible);
     }
 }
